@@ -10,6 +10,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class DriverLocationRequest {
     private String driverId;
-    private String latitude;
-    private String longitude;
+    private double latitude;
+    private double longitude;
 }
