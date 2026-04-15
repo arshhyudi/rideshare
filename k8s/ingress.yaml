@@ -1,0 +1,31 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: rideshare-ingress
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /location
+            pathType: Prefix
+            backend:
+              service:
+                name: location-service
+                port:
+                  number: 80
+
+          - path: /ride
+            pathType: Prefix
+            backend:
+              service:
+                name: ride-service
+                port:
+                  number: 80
+
+          - path: /matching
+            pathType: Prefix
+            backend:
+              service:
+                name: matching-service
+                port:
+                  number: 80
